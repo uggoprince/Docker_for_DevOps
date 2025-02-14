@@ -6,19 +6,19 @@ services:
       context: .
       dockerfile: dockerfile.python
       args:
-        - BASE_IMAGE=python:3.9
+        - BASE_IMAGE=python:3.12
         - APP_VERSION=2.0
     environment:
       - DEBUG=true
-    image: anshuldevops/python_web:2.1
+    image: uggoprince/python_web:2.1
 
   node_service:
     build:
       context: .
       dockerfile: dockerfile.node
       args:
-        - BASE_IMAGE=node:21
+        - BASE_IMAGE=node:23
         - APP_NAME=my-nodejs-app
     environment:
       - NODE_ENV=development
-    image: anshuldevops/node_web:2.1
+    image: uggoprince/node_web:2.1
